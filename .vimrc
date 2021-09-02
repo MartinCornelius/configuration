@@ -61,5 +61,5 @@ set ttyfast
 
 " compile and run (python, c)
 map <F5> :w <CR> :!py % <CR>
-map <F6> :w <CR> :!gcc % -o %< && ./%< <CR>
+autocmd filetype c nnoremap <F6> :w! <bar> exec '!gcc '.shellescape('%') ' -o ' shellescape('%<') '&& .\'.shellescape('%:r') <CR>
 " autocmd filetype c nnoremap <F6> :w! <bar> exec '!cl '.shellescape('%') ' && .\'.shellescape('%:r') <CR>
