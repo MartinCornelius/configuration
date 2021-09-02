@@ -4,14 +4,15 @@ filetype on
 filetype plugin on
 filetype indent on
 
-" autocomplete () {} ''
-inoremap {      {}<Left>
+" autocomplete
+noremap {      {}<Left>
 inoremap {<CR>  {<CR>}<Esc>O
 inoremap {{     {
 inoremap {}     {}
 inoremap        (  ()<Left>
 inoremap <expr> )  strpart(getline('.'), col('.')-1, 1) == ")" ? "\<Right>" : ")"
 inoremap <expr> ' strpart(getline('.'), col('.')-1, 1) == "\'" ? "\<Right>" : "\'\'\<Left>"
+inoremap <expr> " strpart(getline('.'), col('.')-1, 1) == '\"' ? "\<Right>" : "\"\"\<Left>"
 
 " syntax highlighting
 syntax on
