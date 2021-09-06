@@ -21,6 +21,9 @@ set visualbell
 set ruler
 set hlsearch
 
+" pasting
+set pastetoggle=<F4>
+
 " finding files
 set path+=**
 set wildmenu
@@ -34,7 +37,7 @@ let g:netrw_list_hide=netrw_gitignore#Hide()
 let g:netrw_list_hide.=',\(^\|\s\s\)\zs\.\S\+'
 
 " colors 
-colorscheme koehler " peachpuff er også et godt tema
+colorscheme koehler " peachpuff er ogsÃ¥ et godt tema
 highlight Comment ctermfg=green
 
 "set wrap
