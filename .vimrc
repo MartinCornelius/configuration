@@ -12,7 +12,7 @@ inoremap {}     {}
 inoremap        (  ()<Left>
 inoremap <expr> )  strpart(getline('.'), col('.')-1, 1) == ")" ? "\<Right>" : ")"
 inoremap <expr> ' strpart(getline('.'), col('.')-1, 1) == "\'" ? "\<Right>" : "\'\'\<Left>"
-inoremap <expr> " strpart(getline('.'), col('.')-1, 1) == '\"' ? "\<Right>" : "\"\"\<Left>"
+"inoremap <expr> " strpart(getline('.'), col('.')-1, 1) == '\"' ? "\<Right>" : "\"\"\<Left>"
 
 " syntax highlighting
 syntax on
@@ -63,6 +63,4 @@ set ttyfast
 " compile and run (python, c)
 map <F5> :w <CR> :!py % <CR>
 autocmd filetype c nnoremap <F6> :w! <bar> exec '!gcc '.shellescape('%') ' -o ' shellescape('%<') '&& .\'.shellescape('%:r') <CR>
-
-" used for visual studie c compiler
 " autocmd filetype c nnoremap <F6> :w! <bar> exec '!cl '.shellescape('%') ' && .\'.shellescape('%:r') <CR>
