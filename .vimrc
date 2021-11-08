@@ -4,6 +4,10 @@ filetype on
 filetype plugin on
 filetype indent on
 
+" utf-8
+set encoding=utf-8
+set fileencoding=utf-8
+
 " autocomplete
 noremap {      {}<Left>
 inoremap {<CR>  {<CR>}<Esc>O
@@ -27,6 +31,7 @@ set pastetoggle=<F4>
 " finding files
 set path+=**
 set wildmenu
+set laststatus=2
 
 " file browsing
 let g:netrw_banner=0 " disable banner
@@ -37,7 +42,10 @@ let g:netrw_list_hide=netrw_gitignore#Hide()
 let g:netrw_list_hide.=',\(^\|\s\s\)\zs\.\S\+'
 
 " colors 
-colorscheme koehler " peachpuff er ogsÃ¥ et godt tema
+"colorscheme koehler " peachpuff er også et godt tema
+set t_Co=256
+set background=dark
+colorscheme PaperColor
 highlight Comment ctermfg=green
 
 "set wrap
@@ -45,6 +53,10 @@ set textwidth=79
 set formatoptions=tcqrn1
 set shiftwidth=2
 set noshiftround
+
+" line and block cursor
+let &t_SI = "\e[6 q"
+let &t_EI = "\e[2 q"
 
 " tab
 set expandtab
