@@ -43,10 +43,10 @@ let g:netrw_list_hide.=',\(^\|\s\s\)\zs\.\S\+'
 
 " colors 
 "colorscheme koehler " peachpuff er også et godt tema
-set t_Co=256
-set background=dark
-colorscheme PaperColor
-highlight Comment ctermfg=green
+"set t_Co=256
+"set background=dark
+"colorscheme PaperColor
+"highlight Comment ctermfg=green
 
 "set wrap
 set textwidth=79
@@ -55,8 +55,8 @@ set shiftwidth=2
 set noshiftround
 
 " line and block cursor
-let &t_SI = "\e[6 q"
-let &t_EI = "\e[2 q"
+"let &t_SI = "\e[6 q"
+"let &t_EI = "\e[2 q"
 
 " tab
 set expandtab
