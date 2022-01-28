@@ -9,5 +9,3 @@ export LSCOLORS=cxgxfxexbxegedabagacad
 export EDITOR='vim'
 
 PROMPT_DIRTRIM=2
-
-alias code='code --remote wsl+Ubuntu-18.04'
