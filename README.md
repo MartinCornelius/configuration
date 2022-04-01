@@ -34,6 +34,7 @@ This is my personal configuration for my development setup.
 Favorite fonts:
 - Inconsolata for Powerline
 - Hack NF
+- Roboto Mono
 - Code New Roman
 
 Extensions:
