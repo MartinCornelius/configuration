@@ -2,16 +2,16 @@ Terminal config
 --------------------------------
 "colorScheme": "Pro",
 "cursorShape": "filledBox",
-"fontFace": "DejaVu Sans Mono",
-"fontSize": 13,
+"fontFace": "Inconsolata for Powerline",
+"fontSize": 15,
 "name": "Kongens Terminal",
 "scrollbarState": "hidden",
-"startingDirectory": "C:\\Users\\Martin Cornelius\\Programming",
+"startingDirectory": "<Directory>",
 
 Terminal theme
 --------------------------------
 "name": "Pro",
-"black": "#000000",
+"black": "#000000", // alternative (#1D1D1D)
 "red": "#990000",
 "green": "#00a600",
 "yellow": "#999900",

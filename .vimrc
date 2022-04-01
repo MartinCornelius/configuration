@@ -31,6 +31,7 @@ set pastetoggle=<F4>
 " finding files
 set path+=**
 set wildmenu
+set laststatus=2
 
 " file browsing
 let g:netrw_banner=0 " disable banner
@@ -41,14 +42,21 @@ let g:netrw_list_hide=netrw_gitignore#Hide()
 let g:netrw_list_hide.=',\(^\|\s\s\)\zs\.\S\+'
 
 " colors 
-colorscheme koehler " peachpuff er ogsÃ¥ et godt tema
-highlight Comment ctermfg=green
+"colorscheme koehler " peachpuff er også et godt tema
+"set t_Co=256
+"set background=dark
+"colorscheme PaperColor
+"highlight Comment ctermfg=green
 
 "set wrap
 set textwidth=79
 set formatoptions=tcqrn1
 set shiftwidth=2
 set noshiftround
+
+" line and block cursor
+"let &t_SI = "\e[6 q"
+"let &t_EI = "\e[2 q"
 
 " tab
 set expandtab
