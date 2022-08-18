@@ -1,37 +1,18 @@
 set nocompatible
 set number
-"set relativenumber
 syntax enable
 set fileencoding=utf-8
 set encoding=utf-8
-set title
-set autoindent
-set background=dark
-set hlsearch
-set showcmd
-set cmdheight=1
-set laststatus=2
-set scrolloff=10
-set expandtab
-set nosc noru nosm
-set lazyredraw
-set ignorecase
-set smarttab
-filetype plugin indent on
-set shiftwidth=2
 set tabstop=2
+set shiftwidth=2
+set expandtab
 set ai
-set si
-set nowrap
-set backspace=start,eol,indent
-set path+=**
-set wildignore+=*/node_modules/*
+set hlsearch
+set ruler
+set visualbell
 set cursorline
-
-" Color Theme
-"colorscheme NeoSolarized
-colorscheme Molokai
-"colorscheme Gruvbox
+set mouse=a
+set ttyfast
 
 noremap {      {}<Left>
 inoremap {<CR>  {<CR>}<Esc>O
@@ -47,6 +28,12 @@ inoremap <expr> ' strpart(getline('.'), col('.')-1, 1) == "\'" ? "\<Right>" : "\
 
 call plug#begin('~/.vim/plugged')
 
+" GruvBox
+Plug 'morhetz/gruvbox'
+
+" Monokai
+Plug 'patstockwell/vim-monokai-tasty'
+
 " Auto completion
 Plug 'neoclide/coc.nvim', { 'branch': 'release' }
 
@@ -61,6 +48,10 @@ Plug 'scrooloose/nerdtree'
 
 " Syntax highlighting for languages
 Plug 'sheerun/vim-polyglot'
+
+" Fuzzy finder
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
 
 call plug#end()
 
@@ -244,13 +235,15 @@ let mapleader = " "
 nnoremap <leader><leader>c :call NERDComment(0, "toggle")<CR>
 vnoremap <leader><leader>c :call NERDComment(0, "toggle")<CR>
 
-" Prettier
-vmap <leader>f <Plug>(coc-format-selected)
-nmap <leader>f <Plug>(coc-format-selected)
-" Set the prettier CLI executable path
-let g:prettier#exec_cmd_path = "~/.vim/plugged/vim-prettier/node_modules/prettier"
-" Max line length that prettier will wrap on: a number or 'auto'
-let g:prettier#config#print_width = 100 " default is 'auto'
+" Nerdtree
+map <C-n> :NERDTreeToggle<cr>
+
+" Fuzzy Finder
+nmap <leader><leader>f :Files<cr>
+nmap <leader><leader>b :Buffer<cr>
+nnoremap <leader><Tab> :bnext<cr>
+nnoremap <leader><Tab><Tab> :bprevious<cr>
 
 " Colorscheme
-"colorscheme vim-monokai-tasty
+colorscheme vim-monokai-tasty
+
