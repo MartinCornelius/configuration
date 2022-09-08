@@ -29,6 +29,8 @@ call plug#begin('~/.vim/plugged')
   " Color theme
   Plug 'flazz/vim-colorschemes'
 
+	Plug 'xiyaowong/nvim-transparent'
+
 	" Auto completion
 	Plug 'neoclide/coc.nvim', { 'branch': 'release' }
 
@@ -36,9 +38,9 @@ call plug#begin('~/.vim/plugged')
 	Plug 'preservim/nerdcommenter'
 
 	" Status bar
-	"Plug 'itchyny/lightline.vim' 
-  Plug 'vim-airline/vim-airline'
-	Plug 'vim-airline/vim-airline-themes'
+	Plug 'itchyny/lightline.vim' 
+  "Plug 'vim-airline/vim-airline'
+	"Plug 'vim-airline/vim-airline-themes'
 
 	" Directory tree
 	Plug 'scrooloose/nerdtree'
@@ -71,16 +73,18 @@ vnoremap <leader><leader>c :call NERDComment(0, "toggle")<CR>
 map <C-n> :NERDTreeToggle<CR>
 
 " Fuzzy finder
-"nmap <leader><leader>f :Files<cr>
-"nmap <leader><leader>b :Buffer<cr>
-nnoremap <leader><leader>f <cmd>Telescope find_files<CR>
-nnoremap <leader><leader>b <cmd>Telescope buffers<CR>
+nmap <leader><leader>f :Files<cr>
+nmap <leader><leader>b :Buffer<cr>
+"nnoremap <leader><leader>f <cmd>Telescope find_files<CR>
+"nnoremap <leader><leader>b <cmd>Telescope buffers<CR>
 nnoremap <leader><Tab> :bnext<cr>
 nnoremap <leader><Tab><Tab> :bprevious<cr>
 
 " Color theme
 colorscheme PaperColor
 
+" Enable transparent
+let g:transparent_enabled = v:true
 
 " Use K to show documentation in preview window.
 nnoremap <silent> K :call <SID>show_documentation()<CR>
