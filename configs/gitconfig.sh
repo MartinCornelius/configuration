@@ -1,0 +1,10 @@
+# This short script will add the aliases to the existing git configuration
+git config --global alias.st "status --short -uno"
+git config --global alias.ci "commit"
+git config --global alias.ca "commit --amend"
+git config --global alias.br "branch"
+git config --global alias.co "checkout"
+git config --global alias.df "diff"
+git config --global alias.lg "log -p --pretty=fuller --abbrev-commit"
+git config --global alias.lgg "log --pretty=fuller --abbrev-commit --stat"
+git config --global alias.up "pull --rebase"
