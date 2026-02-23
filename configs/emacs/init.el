@@ -31,3 +31,6 @@
 
 ;; Resize bug
 (setq frame-resize-pixelwise t)
+
+(setq c-default-style "k&r")
+(setq c-basic-offset 4)
