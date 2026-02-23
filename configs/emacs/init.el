@@ -18,10 +18,10 @@
 (electric-pair-mode 1) ;; Auto brackets
 
 ;; Fido mode
-(fido-vertical-mode t)
+;;(fido-vertical-mode t)
 
 ;; 80 column ruler
-(setopt display-fill-column-indicator-column 80)
+(setopt display-fill-column-indicator-column 78)
 (global-display-fill-column-indicator-mode)
 
 ;; Font
